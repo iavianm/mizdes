@@ -1,16 +1,13 @@
-import "./header.css";
+import "./Header.css";
 import Link from "next/link";
-import Image from "next/image";
 
 function Header() {
   return (
     <header className={"header"}>
       <Link className={"header__logo-link"} href={"/"}>
-        <Image
+        <img
           src="/images/header-logo.svg"
           alt="Логотип"
-          width={52}
-          height={52}
           className="header__logo"
         />
       </Link>

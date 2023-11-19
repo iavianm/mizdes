@@ -1,8 +1,16 @@
-import Header from "@/app/components/header";
+import Header from "@/app/components/Header/Header";
+import Hero from "@/app/components/Hero/Hero";
+import FeaturesSection from "@/app/components/FeaturesSection/FeaturesSection";
+import VillasSection from "@/app/components/VillasSection/VillasSection";
+import PremiumVilla from "@/app/components/PremiumVilla/PremiumVilla";
 export default function Home() {
   return (
     <main className={"main"}>
       <Header />
+      <Hero />
+      <FeaturesSection />
+      <VillasSection />
+      <PremiumVilla />
     </main>
   );
 }

@@ -62,8 +62,7 @@ li {
   }
 }
 
-.logo {
-  background: url("../../public/images/header-logo.svg");
+.header__logo {
   width: 52px;
   height: 52px;
 }
