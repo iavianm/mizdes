@@ -1,0 +1,21 @@
+.text-block {
+  max-width: 1200px;
+  margin: 0 10px 30px 10px;
+  padding: 40px; /* Добавляем больше отступа */
+  background: #efeeee;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 30px; /* Делаем углы более скругленными */
+  text-align: left; /* Выравниваем текст по левому краю */
+}
+
+.text-block h1 {
+  font-size: 1.5em; /* Адаптируем размер заголовка */
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.text-block p {
+  font-size: 1em;
+  line-height: 1.4; /* Увеличиваем межстрочный интервал */
+  margin-bottom: 1em; /* Увеличиваем отступ между параграфами */
+}

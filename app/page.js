@@ -5,6 +5,9 @@ import VillasSection from "@/app/components/VillasSection/VillasSection";
 import PremiumVilla from "@/app/components/PremiumVilla/PremiumVilla";
 import SiteSlider from "@/app/components/SiteSlider/SiteSlider";
 import InteractiveMap from "@/app/components/InteractiveMap/InteractiveMap";
+import LeisureBlock from "@/app/components/LeisureBlock/LeisureBlock";
+import TextBlock from "@/app/components/TextBlock/TextBlock";
+import Footer from "@/app/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +20,9 @@ export default function Home() {
       <SiteSlider />
       <SiteSlider />
       <InteractiveMap />
+      <LeisureBlock />
+      <TextBlock />
+      <Footer />
     </main>
   );
 }
