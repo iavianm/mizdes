@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 50px;
   background-size: contain;
-  height: 80vh;
+  height: 70vh;
   background: #000 url("../../../public/images/hero.png") no-repeat center;
   border-radius: 10px;
 }
