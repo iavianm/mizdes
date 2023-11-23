@@ -1,0 +1,178 @@
+/* Оверлей */
+.booking-popup-overlay {
+  display: block; /* Показать или скрыть в зависимости от состояния */
+  position: fixed;
+  z-index: 1000; /* Убедитесь, что оверлей ниже модального окна */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Затемнение фона */
+}
+
+/* Главный контейнер попапа */
+.booking-popup {
+  display: block; /* Показать или скрыть в зависимости от состояния */
+  position: fixed;
+  z-index: 1001; /* Поднять над оверлеем */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%; /* Фиксированная ширина попапа */
+  /*max-width: 90%; !* Адаптация к ширине экрана *!*/
+  background: white;
+  padding: 20px;
+  border-radius: 10px; /* Скругление углов */
+}
+
+/* Содержимое попапа */
+.booking-popup-content {
+  /* Удалите margin, если он не нужен, так как вы уже центрировали .booking-popup */
+}
+
+/* Кнопка закрытия */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 48px;
+  cursor: pointer;
+}
+
+/* Группа формы */
+.form-group {
+  margin-bottom: 20px; /* Отступ между полями формы */
+}
+
+/* Управление полями ввода */
+.form-control {
+  width: 100%; /* Изменено с 80% на 100% */
+  padding: 15px; /* Увеличьте паддинг для большего пространства */
+  margin-bottom: 10px; /* Отступ снизу */
+  border: 1px solid #ccc; /* Граница поля */
+  border-radius: 4px; /* Скругление углов поля */
+  background: #fff;
+}
+
+/* Стили для полей даты (если они используются в JSX) */
+.form-control-date {
+  /* Те же стили, что и для .form-control */
+}
+
+/* Обертка для полей даты */
+.form-group-date {
+  /* Подстройте в соответствии с вашими нуждами */
+  margin-bottom: 20px; /* Отступ между полями даты */
+}
+
+/* Кнопка отправки */
+.submit-button {
+  background-color: #ffa500; /* Измените цвет на желаемый оранжевый */
+  color: white;
+  padding: 16px 20px; /* Увеличьте паддинг для более высокой кнопки */
+  margin-top: 15px; /* Отступ сверху */
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px; /* Скругление углов кнопки */
+}
+
+.submit-button:hover {
+  background-color: #cc8400; /* Темный оттенок оранжевого для эффекта при наведении */
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-minus,
+.quantity-plus {
+  background-color: #ddd;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.quantity-input {
+  width: 50px; /* Задать фиксированный размер для инпута */
+  text-align: center;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+}
+
+/* Для коррекции ширины и отступов полей ввода, которые выходят за границы */
+.form-control {
+  width: calc(100% - 30px); /* Уменьшаем ширину на размер padding */
+  box-sizing: border-box; /* Учитываем padding и border в ширине элемента */
+}
+
+/* Убедитесь, что .form-group имеет достаточный размер, чтобы содержать .form-control */
+.form-group {
+  width: 100%; /* Задать 100% ширины относительно родителя */
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.quantity-selector {
+  display: flex;
+  flex-direction: column; /* Элементы теперь выстроены вертикально */
+  align-items: start; /* Выравнивание по центру */
+}
+
+.quantity-label {
+  margin-bottom: 5px; /* Добавим немного отступа между меткой и контролами */
+  font-weight: bold; /* Сделаем текст жирным */
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: center; /* Выравнивание кнопок по центру */
+}
+
+.quantity-minus,
+.quantity-plus {
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 10px 15px; /* Увеличиваем паддинг для большего размера кнопок */
+  font-size: 16px; /* Увеличиваем шрифт в кнопках */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Добавляем плавность перехода */
+}
+
+.quantity-minus:hover,
+.quantity-plus:hover {
+  background-color: #bbb; /* Цвет при наведении */
+}
+
+.quantity-input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 0 10px; /* Увеличиваем отступ между кнопками и инпутом */
+}
+
+/* Дополнительные стили для улучшения внешнего вида */
+.quantity-minus,
+.quantity-plus,
+.quantity-input {
+  border-radius: 4px; /* Добавляем скругление углов */
+}
+
+/* Адаптация к мобильным устройствам */
+@media screen and (max-width: 768px) {
+  .booking-popup {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .form-control,
+  .form-control-date {
+    padding: 10px;
+  }
+
+  .submit-button {
+    padding: 12px 15px;
+  }
+}

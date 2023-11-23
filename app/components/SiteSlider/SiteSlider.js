@@ -1,4 +1,3 @@
-// components/SiteSlider.js
 "use client";
 import React from "react";
 import Slider from "react-slick";
@@ -7,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./SiteSlider.css";
 import Images from "../Images";
 
-const SiteSlider = ({title}) => {
+const SiteSlider = ({ title }) => {
   const settings = {
     dots: true,
     infinite: true,
