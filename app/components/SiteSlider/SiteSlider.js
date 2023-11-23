@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./SiteSlider.css";
 import Images from "../Images";
 
-const SiteSlider = () => {
+const SiteSlider = ({title}) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -40,7 +40,7 @@ const SiteSlider = () => {
 
   return (
     <div className="slider__content">
-      <h1 className="slider__header">Панорамный ресторан мечты на берегу</h1>
+      <h1 className="slider__header">{title}</h1>
       <div className="slider__container">
         <Slider {...settings}>
           {Images.map((item) => (

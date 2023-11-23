@@ -6,7 +6,8 @@ li {
 .header {
   display: flex;
   max-width: 1280px;
-  width: 100%;
+  width: calc(100% - 2 * 70px);
+  margin: 0 auto;
   height: 81px;
   align-items: center;
   justify-content: space-around;
@@ -19,11 +20,20 @@ li {
   padding: 0;
 }
 
-.header__list-item {
+.header__list-items {
   font-weight: 700;
   line-height: 22px;
   font-size: 14px;
+}
+
+.header__list-item {
+  text-decoration: none;
   color: #383a47;
+  display: inline-block;
+}
+
+.header__list-item:hover {
+  transform: scale(1.1);
 }
 
 .header__button {

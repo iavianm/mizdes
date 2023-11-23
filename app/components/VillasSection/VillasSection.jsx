@@ -3,7 +3,7 @@ import "./VillasSection.css";
 
 const VillasSection = () => {
   return (
-    <section>
+    <section className="villas-section">
       <h2>Виллы премиум-класса</h2>
       <p>Когда экологичность и эстетика неразделимы</p>
       <div className={"villasGrid"}>

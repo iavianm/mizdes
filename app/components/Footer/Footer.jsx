@@ -2,6 +2,8 @@ import "./Footer.css";
 import Link from "next/link"; // Убедитесь, что файл стилей подключен
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -45,7 +47,7 @@ const Footer = () => {
             </address>
           </div>
           <div className="footer-section footer-copy">
-            <p>© 2022 Мы ЗДЕСЬ. Все права защищены</p>
+            <p>&copy;{currentYear} Мы ЗДЕСЬ. Все права защищены</p>
           </div>
         </div>
       </div>

@@ -6,12 +6,20 @@
   background-size: contain;
   height: 70vh;
   background: #000 url("../../../public/images/hero.png") no-repeat center;
-  border-radius: 10px;
 }
 
 .hero-content {
-  max-width: 900px;
+  max-width: 1280px;
+  width: calc(100% - 2 * 70px);
+  margin: 0 auto;
   color: white;
+
+}
+
+.hero-content h3,
+.hero-content h1,
+.hero-content p {
+  max-width: 900px;
 }
 
 .hero__features {
@@ -35,12 +43,27 @@
 
 .btn-primary {
   background-color: #d38c20;
+  background-image: linear-gradient(45deg, #ffcc00, #f896b7);
+  background-size: 200% 200%;
+  border-color: transparent;
+  border-style: solid;
   color: #fff;
   text-decoration: none;
   padding: 20px 40px;
   border-radius: 6px;
   font-size: 32px;
   font-weight: 700;
+  transition:
+  background-color 0.2s ease-in-out,
+  color 0.2s ease-in-out;
+}
+
+
+
+.btn-primary:hover {
+  cursor: pointer;
+  animation: moveGradient 3s ease infinite;
+  background-image: linear-gradient(45deg, #ffcc00, #f896b7);
 }
 
 .hero__ftitle {

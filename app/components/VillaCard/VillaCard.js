@@ -12,7 +12,7 @@ const VillaCard = ({ name, area, rooms, description, imageSrc }) => {
           <h3 className={"title"}>{name}</h3>
           <div className={"details"}>
             <span className={"area"}>{area} м²</span>
-            <span className={"rooms"}>{rooms} комнаты</span>
+            <span className={"rooms"}>{rooms}</span>
           </div>
         </div>
 

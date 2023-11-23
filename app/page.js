@@ -8,6 +8,9 @@ import InteractiveMap from "@/app/components/InteractiveMap/InteractiveMap";
 import LeisureBlock from "@/app/components/LeisureBlock/LeisureBlock";
 import TextBlock from "@/app/components/TextBlock/TextBlock";
 import Footer from "@/app/components/Footer/Footer";
+import { sliderText } from "./components/const";
+
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -17,8 +20,8 @@ export default function Home() {
       <FeaturesSection />
       <VillasSection />
       <PremiumVilla />
-      <SiteSlider />
-      <SiteSlider />
+      <SiteSlider title={sliderText.titleRes}/>
+      <SiteSlider title={sliderText.titleSpa} />
       <InteractiveMap />
       <LeisureBlock />
       <TextBlock />
