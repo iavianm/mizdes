@@ -22,7 +22,7 @@ const Footer = () => {
               <a href="#">Ресторан</a>
             </li>
           </ul>
-          <Link href="/#" className="logo-link">
+          <Link href="/contacts" className="logo-link">
             <img
               src={"/images/header-logo.svg"}
               alt={"logo"}

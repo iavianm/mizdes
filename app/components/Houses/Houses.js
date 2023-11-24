@@ -32,7 +32,9 @@ const Houses = ({ house }) => {
 
           <div className="villa-tags">
             {tags.map((tag, index) => (
-              <span key={index}>{tag}</span>
+              <span key={index} className={"villa-tags-items"}>
+                {tag}
+              </span>
             ))}
           </div>
           <div className="villa-description-container">

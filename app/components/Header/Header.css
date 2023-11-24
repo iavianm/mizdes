@@ -30,10 +30,11 @@ li {
   text-decoration: none;
   color: #383a47;
   display: inline-block;
+  /*font-size: 18px;*/
 }
 
 .header__list-item:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -58,7 +59,7 @@ li {
   cursor: pointer;
   background-color: #e09a30;
   color: #fff;
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 .header__logo {

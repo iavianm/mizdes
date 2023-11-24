@@ -4,6 +4,7 @@
   max-width: 1200px; /* Адаптируйте под ваш макет */
   margin: 50px auto; /* Центрирование контейнера */
   gap: 20px; /* Отступы между элементами */
+  border-bottom: #d38c20 1px solid;
 }
 
 .villa-info {
@@ -59,6 +60,14 @@
   border-radius: 5px;
   cursor: pointer;
   border: #d38c20 solid 2px;
+}
+
+.button-book:hover {
+  transform: scale(1.03);
+}
+
+.villa-tags-items:hover {
+  transform: scale(1.01);
 }
 
 .button-tour {
