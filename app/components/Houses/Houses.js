@@ -2,7 +2,7 @@
 import Image from "next/image";
 import "./Houses.css";
 import BookingPopup from "@/app/components/BookingPopup/BookingPopup";
-import { useState } from "react"; // Путь к вашему CSS файлу
+import { useState } from "react";
 
 const Houses = ({ house }) => {
   const [openPopup, setOpenPopup] = useState(false);

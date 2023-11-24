@@ -5,6 +5,7 @@ import Houses from "@/app/components/Houses/Houses";
 import housesContent from "@/app/content/housesContent.json";
 import TerraceBlock from "@/app/components/TerraceBlock/TerraceBlock";
 import heroContent from "@/app/content/heroContent.json";
+import TourPopup from "@/app/components/TourPopup/TourPopup";
 
 const Page = () => {
   return (
@@ -16,6 +17,7 @@ const Page = () => {
       <Houses house={housesContent.highgarden} />
       <TerraceBlock />
       <Footer />
+      <TourPopup />
     </div>
   );
 };
