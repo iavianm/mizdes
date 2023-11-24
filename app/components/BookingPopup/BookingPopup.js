@@ -1,12 +1,19 @@
 "use client";
 import "./BookingPopup.css";
+import { useState } from "react";
 
-const BookingPopup = ({ onClose, isVisible }) => {
+const BookingPopup = ({ isVisible, handleTogglePopup }) => {
+  const [adults, setAdults] = useState(1);
+  const [children, setChildren] = useState(0);
+
+  function onClose() {
+    handleTogglePopup();
+  }
+
   return (
     <>
       <div
         className={`booking-popup-overlay ${isVisible ? "active" : ""}`}
-        onClick={onClose}
       ></div>
       <div className={`booking-popup ${isVisible ? "active" : ""}`}>
         <div className="booking-popup-content">
@@ -14,16 +21,18 @@ const BookingPopup = ({ onClose, isVisible }) => {
             &times;
           </span>
           <h2>Бронирование</h2>
-          <form>
+          <form className={"form-group-container"}>
             <div className="form-group">
               <label htmlFor="cottage-type">Желаемый коттедж</label>
               <select
                 id="cottage-type"
                 name="cottage_type"
-                className="form-control"
+                className="form-control form-group-option"
               >
                 <option value="riviera">Ривьера</option>
-                {/* Другие опции */}
+                <option value="grandis">Грандис</option>
+                <option value="haigarden">Хайгарден</option>
+                <option value="any">Любой вариант</option>
               </select>
             </div>
             <div className="form-group-date">
@@ -67,7 +76,11 @@ const BookingPopup = ({ onClose, isVisible }) => {
             <div className="form-group quantity-selector">
               <label className="quantity-label">Взрослые</label>
               <div className="quantity-controls">
-                <button type="button" className="quantity-minus">
+                <button
+                  type="button"
+                  className="quantity-minus"
+                  onClick={(event) => setAdults(adults > 0 ? adults - 1 : 0)}
+                >
                   -
                 </button>
                 <input
@@ -76,9 +89,13 @@ const BookingPopup = ({ onClose, isVisible }) => {
                   name="adults"
                   className="quantity-input"
                   readOnly
-                  value="1" // Здесь должно быть состояние из вашего компонента
+                  value={adults} // Здесь должно быть состояние из вашего компонента
                 />
-                <button type="button" className="quantity-plus">
+                <button
+                  type="button"
+                  className="quantity-plus"
+                  onClick={(event) => setAdults(adults + 1)}
+                >
                   +
                 </button>
               </div>
@@ -87,7 +104,13 @@ const BookingPopup = ({ onClose, isVisible }) => {
             <div className="form-group quantity-selector">
               <label className="quantity-label">Дети</label>
               <div className="quantity-controls">
-                <button type="button" className="quantity-minus">
+                <button
+                  type="button"
+                  className="quantity-minus"
+                  onClick={(event) =>
+                    setChildren(children > 0 ? children - 1 : 0)
+                  }
+                >
                   -
                 </button>
                 <input
@@ -96,9 +119,13 @@ const BookingPopup = ({ onClose, isVisible }) => {
                   name="children"
                   className="quantity-input"
                   readOnly
-                  value="0" // И здесь состояние из вашего компонента
+                  value={children} // И здесь состояние из вашего компонента
                 />
-                <button type="button" className="quantity-plus">
+                <button
+                  type="button"
+                  className="quantity-plus"
+                  onClick={(event) => setChildren(children + 1)}
+                >
                   +
                 </button>
               </div>
@@ -115,10 +142,11 @@ const BookingPopup = ({ onClose, isVisible }) => {
             <div className="form-group">
               <label htmlFor="phone">Ваш телефон</label>
               <input
-                type="text"
+                type="tel"
                 id="phone"
                 name="phone"
                 className="form-control"
+                placeholder="+7 (999) 999-99-99"
               />
             </div>
             <button type="submit" className="submit-button">

@@ -39,16 +39,16 @@
   border-radius: 5px;
 }
 
-.villa-text:first-child {
-  padding-bottom: 30px;
-}
-
 .villa-text {
   margin: 0;
-  padding: 0;
+  padding: 0 0 20px 0;
   font-size: 18px;
   line-height: 24px;
 }
+
+/*.villa-text:last-child {*/
+/*  padding-bottom: 0;*/
+/*}*/
 
 .button-book,
 .button-tour {
@@ -66,18 +66,13 @@
   color: #d38c20;
 }
 
-/*.villa-image {*/
-/*  flex: 2; !* Занимает 2 части из 5 *!*/
-/*  display: flex;*/
-/*  justify-content: center;*/
-/*  align-items: center;*/
-/*}*/
+.villa-image {
+  position: relative;
+  width: 45%;
+}
 
 .villa-image img {
-  /*max-width: 100%;*/
-
-  /*height: auto;*/
-  /*display: block; !* Убедитесь, что изображение не имеет внешних отступов *!*/
+  border-radius: 10px;
 }
 
 .villa-info-container {
