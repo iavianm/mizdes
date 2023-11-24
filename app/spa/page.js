@@ -10,9 +10,9 @@ import Hero from "../components/Hero/Hero";
 import VillasSection from "../components/VillasSection/VillasSection";
 import "./spa.css";
 import heroContent from "@/app/content/heroContent.json";
-import { villas } from "@/app/content/villasSpa.json";
+import villas from "@/app/content/villasSpa.json";
 import titles from "@/app/content/villasSectionTitles.json";
-import { spa } from "@/app/content/sliderSpaImages.json";
+import sliderSpaImages from "@/app/content/sliderSpaImages.json";
 
 const Page = () => {
   const customSliderSettings = {
@@ -32,14 +32,14 @@ const Page = () => {
       <Hero content={heroContent.spaPage} />
       <div className="villas-spa__section">
         <VillasSection
-          villas={villas}
+          villas={villas.villas}
           about={titles.spaPage}
           className="grid-spa"
         />
       </div>
       <div className="slider-spa">
         <Slider {...customSliderSettings}>
-          {spa.map((item) => (
+          {sliderSpaImages.spa.map((item) => (
             <div key={item.id}>
               <img src={item.src} alt={item.alt} className="slider-spa__img" />
             </div>

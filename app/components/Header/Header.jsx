@@ -6,13 +6,13 @@ import { useState, useEffect } from "react";
 
 function Header() {
   const [burgerOpened, setBurgerOpened] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(undefined);
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -72,11 +72,7 @@ function Header() {
               className="header__logo"
             />
           </Link>
-          <button
-            className="header-burger__btn"
-            onClick={handleOpenBurger}
-            isOpen={burgerOpened}
-          >
+          <button className="header-burger__btn" onClick={handleOpenBurger}>
             <img
               className="header-burger__img"
               src="/images/burger-icon.svg"
