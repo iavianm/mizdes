@@ -8,11 +8,11 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
 import VillasSection from "../components/VillasSection/VillasSection";
-import { spaImages } from "../components/Images";
 import "./spa.css";
 import heroContent from "@/app/content/heroContent.json";
 import { villas } from "@/app/content/villasSpa.json";
 import titles from "@/app/content/villasSectionTitles.json";
+import { spa } from "@/app/content/sliderSpaImages.json";
 
 const Page = () => {
   const customSliderSettings = {
@@ -38,7 +38,7 @@ const Page = () => {
         />
       </div>
       <Slider {...customSliderSettings}>
-        {spaImages.map((item) => (
+        {spa.map((item) => (
           <div key={item.id} className="slider-spa">
             <img src={item.src} alt={item.alt} className="slider-spa__img" />
           </div>

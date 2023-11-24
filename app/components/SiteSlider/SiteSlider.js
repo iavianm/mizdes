@@ -1,13 +1,11 @@
-// components/SiteSlider.js
 "use client";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./SiteSlider.css";
-import {Images} from "../Images";
 
-const SiteSlider = ({ title }) => {
+const SiteSlider = ({ title, images }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -43,7 +41,7 @@ const SiteSlider = ({ title }) => {
       <h1 className="slider__header">{title}</h1>
       <div className="slider__container">
         <Slider {...settings}>
-          {Images.map((item) => (
+          {images.map((item) => (
             <div key={item.id} className="slider__img-container">
               <img src={item.src} alt={item.alt} className="slider__img" />
               <p className="slider__description">{item.description}</p>

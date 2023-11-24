@@ -8,10 +8,11 @@ import InteractiveMap from "@/app/components/InteractiveMap/InteractiveMap";
 import LeisureBlock from "@/app/components/LeisureBlock/LeisureBlock";
 import TextBlock from "@/app/components/TextBlock/TextBlock";
 import Footer from "@/app/components/Footer/Footer";
-import { sliderText } from "./components/const";
 import heroContent from "@/app/content/heroContent.json";
 import { villas } from "@/app/content/villasMain.json";
-import titles from "@/app/content/villasSectionTitles.json";
+import villasTitles from "@/app/content/villasSectionTitles.json";
+import slidersTitles from "@/app/content/sliderTexts.json";
+import { restaurant, spa } from "@/app/content/sliderHomeImages.json";
 
 export default function Home() {
   return (
@@ -19,10 +20,10 @@ export default function Home() {
       <Header />
       <Hero content={heroContent.homePage} />
       <FeaturesSection />
-      <VillasSection villas={villas} about={titles.homePage} />
+      <VillasSection villas={villas} about={villasTitles.homePage} />
       <PremiumVilla />
-      <SiteSlider title={sliderText.titleRes} />
-      <SiteSlider title={sliderText.titleSpa} />
+      <SiteSlider title={slidersTitles.homePage.titleRes} images={restaurant} />
+      <SiteSlider title={slidersTitles.homePage.titleSpa} images={spa} />
       <InteractiveMap />
       <LeisureBlock />
       <TextBlock />
