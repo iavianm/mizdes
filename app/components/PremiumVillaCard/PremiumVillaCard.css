@@ -50,3 +50,15 @@
   padding: 2px 8px;
   border-radius: 4px;
 }
+
+@media screen and (max-width: 768px) {
+  .premiumVilla {
+    width: calc(100% - 2 * 40px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .premiumVilla {
+    width: calc(100% - 2 * 20px);
+  }
+}

@@ -1,10 +1,11 @@
+// components/SiteSlider.js
 "use client";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./SiteSlider.css";
-import Images from "../Images";
+import {Images} from "../Images";
 
 const SiteSlider = ({ title }) => {
   const settings = {

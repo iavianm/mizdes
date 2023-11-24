@@ -17,14 +17,14 @@ export default function FeaturesSection() {
         </div>
         <div className="features-grid">
           <div className="feature-item">
-            <img src="/images/club-house.png" alt="Клубный дом" />
+            <img src="/images/spa-image.png" alt="Клубный дом" />
             <div className="feature-info">
               <strong>25 га</strong>
               <span>площадь клуба</span>
             </div>
           </div>
           <div className="feature-item">
-            <img src="/images/beach-line.png" alt="Береговая линия" />
+            <img src="/images/slider-brige.png" alt="Береговая линия" />
             <div className="feature-info">
               <strong>1 км</strong>
               <span>береговой линии</span>
@@ -49,3 +49,5 @@ export default function FeaturesSection() {
     </section>
   );
 }
+
+
