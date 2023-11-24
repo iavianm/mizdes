@@ -37,13 +37,16 @@ const Page = () => {
           className="grid-spa"
         />
       </div>
-      <Slider {...customSliderSettings}>
-        {spa.map((item) => (
-          <div key={item.id} className="slider-spa">
-            <img src={item.src} alt={item.alt} className="slider-spa__img" />
-          </div>
-        ))}
-      </Slider>
+      <div className="slider-spa">
+        <Slider {...customSliderSettings}>
+          {spa.map((item) => (
+            <div key={item.id}>
+              <img src={item.src} alt={item.alt} className="slider-spa__img" />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
       <Footer />
     </section>
   );

@@ -36,12 +36,17 @@ const SiteSlider = ({ title, images }) => {
     ],
   };
 
+  let duplicatedSlides = [...images];
+  if (images.length <= settings.slidesToShow) {
+    duplicatedSlides = [...images, ...images, ...images]; // Дублируем слайды
+  }
+
   return (
     <div className="slider__content">
       <h1 className="slider__header">{title}</h1>
       <div className="slider__container">
         <Slider {...settings}>
-          {images.map((item) => (
+          {duplicatedSlides.map((item) => (
             <div key={item.id} className="slider__img-container">
               <img src={item.src} alt={item.alt} className="slider__img" />
               <p className="slider__description">{item.description}</p>
