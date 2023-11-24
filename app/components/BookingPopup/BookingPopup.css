@@ -24,7 +24,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 70%; /* Фиксированная ширина попапа */
+  width: 80%; /* Фиксированная ширина попапа */
   /*max-width: 90%; !* Адаптация к ширине экрана *!*/
   background: white;
   padding: 20px;
@@ -212,7 +212,7 @@
 }
 
 /* Адаптация к мобильным устройствам */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .booking-popup {
     width: 90%;
     padding: 10px;
