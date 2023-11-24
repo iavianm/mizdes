@@ -9,18 +9,18 @@ import LeisureBlock from "@/app/components/LeisureBlock/LeisureBlock";
 import TextBlock from "@/app/components/TextBlock/TextBlock";
 import Footer from "@/app/components/Footer/Footer";
 import { sliderText } from "./components/const";
-
-import Link from 'next/link';
+import heroContent from "@/app/content/heroContent.json";
 
 export default function Home() {
+  console.log();
   return (
     <main className={"main"}>
       <Header />
-      <Hero />
+      <Hero content={heroContent.homePage} />
       <FeaturesSection />
       <VillasSection />
       <PremiumVilla />
-      <SiteSlider title={sliderText.titleRes}/>
+      <SiteSlider title={sliderText.titleRes} />
       <SiteSlider title={sliderText.titleSpa} />
       <InteractiveMap />
       <LeisureBlock />

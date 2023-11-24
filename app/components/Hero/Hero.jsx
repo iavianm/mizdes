@@ -1,35 +1,32 @@
 import "./Hero.css";
 
-function Hero() {
+function Hero({ content }) {
+  const {
+    title,
+    subtitle,
+    description,
+    features,
+    buttonText,
+    buttonLink,
+    featureIconSrc,
+  } = content;
+
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <h3 className="hero__ftitle">Ленинградская область, Зелёная Роща</h3>
-        <h1 className="hero__title">Максимум условий для комфортного отдыха</h1>
-        <p className="hero__description">
-          Открой для себя абсолютно новый загородный клуб, включающий лучшие
-          практики гостиничного сервиса, услуги ресторана, красоты, здоровья и
-          активного отдыха.
-        </p>
+        <h3 className="hero__ftitle">{title}</h3>
+        <h1 className="hero__title">{subtitle}</h1>
+        <p className="hero__description">{description}</p>
         <ul className="hero__features">
-          <li className="hero__features_item">
-            {" "}
-            <img src="/images/teenyicons_tick-circ.svg" />
-            Современный дизайн и качественный сервис
-          </li>
-          <li className="hero__features_item">
-            {" "}
-            <img src="/images/teenyicons_tick-circ.svg" />
-            Первая береговая линия Финского залива с собственным пляжем
-          </li>
-          <li className="hero__features_item">
-            {" "}
-            <img src="/images/teenyicons_tick-circ.svg" />
-            Вертолетная площадка
-          </li>
+          {features.map((feature, index) => (
+            <li key={index} className="hero__features_item">
+              <img src={featureIconSrc} alt="" />
+              {feature}
+            </li>
+          ))}
         </ul>
-        <a href="#" className="btn btn-primary">
-          Все коттеджи
+        <a href={buttonLink} className="btn btn-primary">
+          {buttonText}
         </a>
       </div>
     </section>
