@@ -20,10 +20,21 @@ const BookingPopup = ({ isVisible, handleTogglePopup }) => {
           <span className="close-button" onClick={onClose}>
             &times;
           </span>
-          <h2>Бронирование</h2>
+          <h2 className={"booking-popup-title"}>Бронирование</h2>
+          <p className={"booking-popup-about"}>
+            Только тем, кто присоединиться к Мы ЗДЕСЬ team с самого начала будет
+            предоставлена наша накопительная бонусная карта со скидкой 5% при
+            втором заселении. В дальнейшем % вашей скидки будет зависеть от
+            общей потраченной суммы.
+          </p>
           <form className={"form-group-container"}>
             <div className="form-group">
-              <label htmlFor="cottage-type">Желаемый коттедж</label>
+              <label
+                htmlFor="cottage-type"
+                className={"form-group-option-label"}
+              >
+                Желаемый коттедж
+              </label>
               <select
                 id="cottage-type"
                 name="cottage_type"
