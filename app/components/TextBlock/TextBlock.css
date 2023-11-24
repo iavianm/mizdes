@@ -21,3 +21,20 @@
   line-height: 1.4; /* Увеличиваем межстрочный интервал */
   margin-bottom: 1em; /* Увеличиваем отступ между параграфами */
 }
+
+@media screen and (max-width: 768px) {
+  .text-block {
+    width: calc(100% - 2 * 40px);
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text-block {
+    width: calc(100% - 2 * 20px);
+    padding: 10px;
+  }
+
+
+
+}

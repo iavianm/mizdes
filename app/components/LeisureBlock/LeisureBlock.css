@@ -55,3 +55,15 @@
     flex: 0 1 calc(100% - 10px); /* Для одной карточки в ряд на узких экранах */
   }
 }
+
+@media screen and (max-width: 768px) {
+  .leisureBlock {
+    width: calc(100% - 2 * 40px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .leisureBlock {
+    width: calc(100% - 2 * 20px);
+  }
+}

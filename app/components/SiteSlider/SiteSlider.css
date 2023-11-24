@@ -84,3 +84,15 @@
 .slider__button {
   margin-top: 60px;
 }
+
+@media screen and (max-width: 768px) {
+  .slider__content {
+    width: calc(100% - 2 * 40px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider__content {
+    width: calc(100% - 2 * 20px);
+  }
+}

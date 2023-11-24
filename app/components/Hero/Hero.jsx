@@ -1,35 +1,39 @@
 import "./Hero.css";
 
-function Hero() {
+function Hero({
+  adress,
+  title,
+  description,
+  features1,
+  features2,
+  features3,
+  textBtn,
+}) {
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <h3 className="hero__ftitle">Ленинградская область, Зелёная Роща</h3>
-        <h1 className="hero__title">Максимум условий для комфортного отдыха</h1>
-        <p className="hero__description">
-          Открой для себя абсолютно новый загородный клуб, включающий лучшие
-          практики гостиничного сервиса, услуги ресторана, красоты, здоровья и
-          активного отдыха.
-        </p>
+        <h3 className="hero__ftitle">{adress}</h3>
+        <h1 className="hero__title">{title}</h1>
+        <p className="hero__description">{description}</p>
         <ul className="hero__features">
           <li className="hero__features_item">
             {" "}
             <img src="/images/teenyicons_tick-circ.svg" />
-            Современный дизайн и качественный сервис
+            {features1}
           </li>
           <li className="hero__features_item">
             {" "}
             <img src="/images/teenyicons_tick-circ.svg" />
-            Первая береговая линия Финского залива с собственным пляжем
+            {features2}
           </li>
           <li className="hero__features_item">
             {" "}
             <img src="/images/teenyicons_tick-circ.svg" />
-            Вертолетная площадка
+            {features3}
           </li>
         </ul>
-        <a href="#" className="btn btn-primary">
-          Все коттеджи
+        <a href="#" className="btn-primary">
+          {textBtn}
         </a>
       </div>
     </section>
