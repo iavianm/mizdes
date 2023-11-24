@@ -9,7 +9,7 @@ import TourPopup from "@/app/components/TourPopup/TourPopup";
 
 const Page = () => {
   return (
-    <div className={"main"}>
+    <section className={"main"}>
       <Header />
       <Hero content={heroContent.housesPage} />
       <Houses house={housesContent.riviera} />
@@ -17,8 +17,8 @@ const Page = () => {
       <Houses house={housesContent.highgarden} />
       <TerraceBlock />
       <Footer />
-      <TourPopup />
-    </div>
+      {/*<TourPopup />*/}
+    </section>
   );
 };
 

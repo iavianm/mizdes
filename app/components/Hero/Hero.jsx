@@ -1,39 +1,32 @@
 import "./Hero.css";
 
-function Hero({
-  adress,
-  title,
-  description,
-  features1,
-  features2,
-  features3,
-  textBtn,
-}) {
+function Hero({ content }) {
+  const {
+    title,
+    subtitle,
+    description,
+    features,
+    buttonText,
+    buttonLink,
+    featureIconSrc,
+  } = content;
+
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <h3 className="hero__ftitle">{adress}</h3>
-        <h1 className="hero__title">{title}</h1>
+        <h3 className="hero__ftitle">{title}</h3>
+        <h1 className="hero__title">{subtitle}</h1>
         <p className="hero__description">{description}</p>
         <ul className="hero__features">
-          <li className="hero__features_item">
-            {" "}
-            <img src="/images/teenyicons_tick-circ.svg" />
-            {features1}
-          </li>
-          <li className="hero__features_item">
-            {" "}
-            <img src="/images/teenyicons_tick-circ.svg" />
-            {features2}
-          </li>
-          <li className="hero__features_item">
-            {" "}
-            <img src="/images/teenyicons_tick-circ.svg" />
-            {features3}
-          </li>
+          {features.map((feature, index) => (
+            <li key={index} className="hero__features_item">
+              <img src={featureIconSrc} alt="" />
+              {feature}
+            </li>
+          ))}
         </ul>
-        <a href="#" className="btn-primary">
-          {textBtn}
+        <a href={buttonLink} className="btn btn-primary">
+          {buttonText}
         </a>
       </div>
     </section>
