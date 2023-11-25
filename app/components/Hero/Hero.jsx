@@ -1,6 +1,6 @@
 import "./Hero.css";
 
-function Hero({ content }) {
+function Hero({ content = {} }) {
   const {
     title,
     subtitle,
