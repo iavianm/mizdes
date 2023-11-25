@@ -84,7 +84,7 @@
   font-size: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1140px) {
   .hero-content h3,
   .hero-content h1,
   .hero-content p {
@@ -137,5 +137,10 @@
 
   .hero__features_item {
     font-size: 14px;
+  }
+
+  .btn-primary {
+    padding: 15px 30px;
+    font-size: 16px;
   }
 }

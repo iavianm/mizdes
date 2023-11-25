@@ -39,7 +39,7 @@ const Houses = ({ house }) => {
           </div>
           <div className="villa-description-container">
             <div className="villa-description-about">
-              <div>
+              <div className="villa-content">
                 {about.map((paragraph, index) => (
                   <p className="villa-text" key={index}>
                     {paragraph}
